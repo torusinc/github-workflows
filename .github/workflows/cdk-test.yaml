@@ -166,7 +166,7 @@ jobs:
           cat sonar-project.properties
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v4
+        uses: SonarSource/sonarqube-scan-action@master
         if: "${{ inputs.USES_SONAR_CLOUD != '' }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
